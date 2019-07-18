@@ -87,7 +87,7 @@ https://www.vuemastery.com/courses/real-world-vue-js/vue-cli
 Download Vetur, ESLint, Prettier plugin.<br>
 Then do the following.
 ```
-// .eslintrc.js
+// Add code in .eslintrc.js
 
 ...
  extends: [
@@ -100,7 +100,9 @@ Then do the following.
 ...
 
 
-// Create .prettierrc.js
+
+
+// Create .prettierrc.js then add code below.
 
 /*
  We make this file for Prettify
