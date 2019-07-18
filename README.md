@@ -33,15 +33,16 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ## From Scratch ##
 
 ### Creating project and enviorment with CLI
-
-$ vue create project_name<br>
-$ cd project_name<br>
-\$ yarn run serve/npm run serve
+```
+$ vue create project_name
+$ cd project_name
+$ yarn run serve/npm run serve
+```
 
 ### Creating project with UI
-
-\$ vue ui
-
+```
+$ vue ui
+```
 ### Basic Project Structure
 
 - Nod_modules: The libraries/dependencies to build project<br>
@@ -65,17 +66,53 @@ $ cd project_name<br>
 
 ### Build Process
 
-Webpack will be bundling all our files together<br>
-\$ yarn run build // This will make a dist folder<br>
-
+Webpack will be bundling all our files together
+```
+$ yarn run build // This will make a dist folder
+```
 #### In index.html in the dist folder two script tags has been added
-
+```
 <script src=/js/chunk-vendors.c6093fef.js></script> //points to all are dependencies<br>
 <script src=/js/app.4e9b2e36.js></script> // App specific code including the code in main.js which renders and mounts the app
-
+```
 ### Adding Plugins
-
-\$ vue add vuetify
-
+```
+$ vue add vuetify
+```
 from:<br>
 https://www.vuemastery.com/courses/real-world-vue-js/vue-cli
+
+
+## From tutorial
+Download Vetur, ESLint, Prettier plugin.<br>
+Then do the following.
+```
+// .eslintrc.js
+
+...
+ extends: [
+    'plugin:vue/essential',
+
+    // After installing the ES Lint and Prettier extention configure Prettier for this project.
+    '@vue/prettier',
+    'plugin:prettier/recommended'
+  ],
+...
+
+
+// Create .prettierrc.js
+
+/*
+ We make this file for Prettify
+
+ Set this up as anyway you prefer
+
+ */
+
+module.exports = {
+  singleQuote: true, // This will convert double quotes to single quotes,
+  semi: false // Make sure that semicolons are not automatically inserted.
+}
+
+```
+
